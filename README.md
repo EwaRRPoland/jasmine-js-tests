@@ -1,133 +1,43 @@
-# goit-js-hw-02
+# jasmine-js-tests
 
-## Zadanie 1
+# Przykładowe testy dotyczą problemów:
 
-Napisz funkcję ``calculateRectangleArea``, która będzie obliczała pole prostokąta na podstawie długości i szerokości, przekazanych jako argumenty funkcji. Następnie przetestuj tę funkcję, używając testów jednostkowych w Jasmine lub innym narzędziu do testowania JavaScript.
+## Oto krótki opis zadań:
 
-```// calculate.js
-function calculateRectangleArea(length, width) {
-  return length * width;
-}
+1. Obliczanie pola prostokąta:
 
-module.exports = calculateRectangleArea;
+- Napisz funkcję `calculateRectangleArea`, która przyjmuje długość i szerokość prostokąta jako argumenty.
 
-// calculate.test.js
-const calculateRectangleArea = require('./calculate');
+- Funkcja powinna obliczyć pole prostokąta na podstawie przekazanych wymiarów.
 
-test('Oblicza pole prostokąta o długości 5 i szerokości 4', () => {
-  expect(calculateRectangleArea(5, 4)).toBe(20);
-});
+- Zwróć obliczone pole.
 
-test('Oblicza pole prostokąta o długości 3 i szerokości 7', () => {
-  expect(calculateRectangleArea(3, 7)).toBe(21);
-});
+- Następnie przetestuj tę funkcję, używając testów jednostkowych w `Jasmine` lub innym narzędziu do testowania `JavaScript`.
 
-test('Oblicza pole prostokąta o długości 10 i szerokości 10', () => {
-  expect(calculateRectangleArea(10, 10)).toBe(100);
-});
+2. Sprawdzanie pełnoletniości:
 
-```
-## Zadanie 2
+- Napisz funkcję `isAdult`, która przyjmuje wiek osoby jako argument.
 
-Napisz funkcję ``isAdult``, która będzie sprawdzała, czy osoba jest pełnoletnia, na podstawie przekazanego wieku. Funkcja powinna zwracać wartość logiczną (``true`` lub ``false``). Następnie przetestuj tę funkcję dla różnych przypadków.
+- Funkcja powinna zwracać wartość logiczną (`true` lub `false`), w zależności od tego, czy osoba jest pełnoletnia (czy ma 18 lat lub więcej).
 
-```// checkAge.js
-function isAdult(age) {
-  return age >= 18;
-}
+- Przetestuj tę funkcję dla różnych przypadków, aby upewnić się, że działa zgodnie z oczekiwaniami.
 
-module.exports = isAdult;
+- Po napisaniu funkcji i przeprowadzeniu testów, uruchom je, aby zweryfikować poprawność działania.
 
-// checkAge.test.js
-const isAdult = require('./checkAge');
+# Wdrażanie lokalne Wymagania:
 
-test('Sprawdza czy osoba o wieku 20 lat jest pełnoletnia', () => {
-  expect(isAdult(20)).toBe(true);
-});
+## dotyczące konfiguracji środowiska dla testów Jasmine w projekcie. Oto kilka kroków, które powinieneś wykonać:
 
-test('Sprawdza czy osoba o wieku 16 lat jest pełnoletnia', () => {
-  expect(isAdult(16)).toBe(false);
-});
+1. Zainstaluj `Node.js`: Upewnij się, że masz zainstalowany `Node.js` na swoim systemie. Jeśli nie, pobierz go ze strony` Node.js` i zainstaluj.
 
-test('Sprawdza czy osoba o wieku 18 lat jest pełnoletnia', () => {
-  expect(isAdult(18)).toBe(true);
-});
+2. Sprawdź wersję `Node.js`: Upewnij się, że korzystasz z wersji `Node.js` 18 lub 20, ponieważ projekt został przetestowany na tych wersjach.
 
-```
+3. Zainstaluj `Git`: Jeśli jeszcze tego nie zrobiłeś, zainstaluj `Git` na swoim komputerze. Możesz pobrać go ze strony `Git`.
 
-Po napisaniu funkcji i odpowiednich testów, uruchom je, aby sprawdzić poprawność działania. Upewnij się, że testy przechodzą, a funkcje zachowują się zgodnie z oczekiwaniami.
+4. Otwórz katalog projektu: Przejdź do katalogu głównego swojego projektu za pomocą wiersza poleceń lub terminala.
 
-# Instrukcja 
+5. Sklonuj repozytorium: Sklonuj repozytorium projektu za pomocą komendy` git clone <adres-repozytorium>`.
 
-Oto kroki do wykonania zadania domowego:
+6. Zainstaluj moduły lokalnie: W katalogu projektu uruchom komendę `npm install`, aby zainstalować moduły zdefiniowane w pliku `package.json`.
 
-## Kroki do wykonania zadania z operacjami matematycznymi:
-
-Stwórz nowy plik JavaScript o nazwie ``calculate.js``.
-W pliku ``calculate.js``, zdefiniuj funkcję ``calculateRectangleArea``, która będzie przyjmować długość i szerokość prostokąta jako argumenty i zwracać ich pole.
-
-```// calculate.js
-function calculateRectangleArea(length, width) {
-  return length * width;
-}
-
-module.exports = calculateRectangleArea;
-
-```
-Stwórz nowy plik testowy JavaScript o nazwie ``calculate.test.js``.
-W pliku ``calculate.test.js``, użyj funkcji test z biblioteki testowej (np. ``Jest``), aby napisać testy dla funkcji ``calculateRectangleArea``.
-
-```// calculate.test.js
-const calculateRectangleArea = require('./calculate');
-
-test('Oblicza pole prostokąta o długości 5 i szerokości 4', () => {
-  expect(calculateRectangleArea(5, 4)).toBe(20);
-});
-
-test('Oblicza pole prostokąta o długości 3 i szerokości 7', () => {
-  expect(calculateRectangleArea(3, 7)).toBe(21);
-});
-
-test('Oblicza pole prostokąta o długości 10 i szerokości 10', () => {
-  expect(calculateRectangleArea(10, 10)).toBe(100);
-});
-
-```
-
-Uruchom testy, aby sprawdzić, czy funkcja ``calculateRectangleArea`` działa poprawnie.
-
-## Kroki do wykonania zadania z operatorem porównania:
-
-Stwórz nowy plik JavaScript o nazwie ``checkAge.js``.
-W pliku ``checkAge.js``, zdefiniuj funkcję ``isAdult``, która będzie sprawdzała, czy osoba jest pełnoletnia na podstawie wieku.
-
-```// checkAge.js
-function isAdult(age) {
-  return age >= 18;
-}
-
-module.exports = isAdult;
-
-```
-
-Stwórz nowy plik testowy JavaScript o nazwie ``checkAge.test.js``.
-W pliku ``checkAge.test.js``, użyj funkcji test z biblioteki testowej (np. ``Jest``), aby napisać testy dla funkcji ``isAdult``.
-
-```// checkAge.test.js
-const isAdult = require('./checkAge');
-
-test('Sprawdza czy osoba o wieku 20 lat jest pełnoletnia', () => {
-  expect(isAdult(20)).toBe(true);
-});
-
-test('Sprawdza czy osoba o wieku 16 lat jest pełnoletnia', () => {
-  expect(isAdult(16)).toBe(false);
-});
-
-test('Sprawdza czy osoba o wieku 18 lat jest pełnoletnia', () => {
-  expect(isAdult(18)).toBe(true);
-});
-
-```
-Uruchom testy, aby sprawdzić, czy funkcja ``isAdult`` działa poprawnie.
-Po wykonaniu powyższych kroków, sprawdź czy testy przechodzą, a funkcje zachowują się zgodnie z oczekiwaniami.
+7. Uruchom testy: Aby uruchomić testy, użyj komendy `npm test`.
