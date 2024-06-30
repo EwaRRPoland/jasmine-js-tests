@@ -74,6 +74,8 @@ Gdy jest zainstalowany `Jasmine` i skonfigurowany skrypt testowy, mogłam urucho
 
 ## wynik testów:
 
+![](https://github.com/EwaRRPoland/jasmine-js-tests/blob/287485f3dbb775fa7f6c927c65d3ec17bc485b3b/assets/jasmine_tests.jpg)
+
 Wynik testów - krok po kroku opis, co oznacza każda część wyniku:
 
 1.  **Randomized with seed 00008**:
